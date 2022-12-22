@@ -81,6 +81,8 @@ contract OylamaV1Test is Test {
         oylama.migrateToCode(oylamaV2);
         vm.prank(DEV_KASASI);
         oylama.migrateToCode(oylamaV2);
+
+        assertEq(IOylama(address(oylama)).versionHash(), keccak256("OylamaV2"));
     }
 
     event PriceChange(address indexed token, uint256 price);
