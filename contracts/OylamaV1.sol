@@ -9,7 +9,7 @@ import {IOylama} from "./IOylama.sol";
 address constant OYLAMA_V1 = 0x4e75083cb4b78CEB8d397598b8230858748e474A;
 
 contract OylamaV1 is IOylama {
-    function call(address target, bytes calldata data) external {
+    function callTarget(address target, bytes calldata data) external {
         require(msg.sender == DEV_KASASI);
         (bool success, ) = target.call(data);
         require(success);
