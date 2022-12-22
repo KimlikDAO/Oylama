@@ -9,6 +9,15 @@ import {IOylama} from "./IOylama.sol";
 address constant OYLAMA_V1 = 0x4e75083cb4b78CEB8d397598b8230858748e474A;
 
 contract OylamaV1 is IOylama {
+    /**
+     * As of OylamaV1, the entire authority of Oylama is delegated to
+     * `DEV_KASASI`. In roughly 7 migrations, the entire authority will
+     * be back to the TCKO holders.
+     *
+     * @param target           Address of the contract we'd like to call
+     * @param data             The calldata (including the selector) to be sent
+     *                         to the target.
+     */
     function callTarget(address target, bytes calldata data) external {
         require(msg.sender == DEV_KASASI);
         (bool success, ) = target.call(data);

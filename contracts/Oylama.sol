@@ -12,8 +12,6 @@ contract Oylama {
         }
     }
 
-    receive() external payable {}
-
     fallback() external payable {
         assembly {
             let codeAddress := sload(CODE_SLOT)
