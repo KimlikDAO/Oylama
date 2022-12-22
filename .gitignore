@@ -1,0 +1,6 @@
+!/broadcast
+.env
+/broadcast/**/dry-run/
+/broadcast/*/31337/
+cache/
+out/
