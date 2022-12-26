@@ -6,7 +6,7 @@ import {CODE_SLOT} from "interfaces/ERC1967.sol";
 import {DEV_KASASI} from "interfaces/Addresses.sol";
 import {IOylama} from "./IOylama.sol";
 
-address constant OYLAMA_V1 = 0x4e75083cb4b78CEB8d397598b8230858748e474A;
+address constant OYLAMA_V1 = 0x5e9Ec475Fdbd30Ab8D306D22b60Cc9dd856CDCfe;
 
 contract OylamaV1 is IOylama {
     /**
